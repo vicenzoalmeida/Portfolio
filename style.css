@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:wght@400;600&display=swap'); /* Importa fontes externas */
+
+
+:root {
+    --cor-primaria: #243642; /* Cor de fundo principal */
+    --cor-secundaria: #E2F1E7; /* Cor do texto principal */
+    --cor-terciaria: #387478; /* Cor de destaque */
+    --cor-hover: #629584; /* Cor ao passar o mouse */
+
+    --fonte-primaria: 'krona one', sans-serif; /* Fonte principal */
+    --fonte-secundaria: 'Montserrat', sans-serif; /* Fonte secundária */
+}
+
+* {
+    margin: 0; /* Remove margem padrão */
+    padding: 0; /* Remove padding padrão */
+    
+}
+
+body {
+    background-color: var(--cor-primaria); /* Cor de fundo */
+    color: var(--cor-secundaria); /* Cor do texto */
+    box-sizing: border-box; /* Inclui padding e border no tamanho total */
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 15%; /* Espaçamento interno: topo, direita, baixo, esquerda */
+}
+
+.cabecalho__menu {
+    display: flex; /* Usa flexbox */
+    gap: 80px; /* Espaço entre itens */
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-secundaria); /* Fonte do link */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    color: var(--cor-terciaria); /* Cor do link */
+    text-decoration: none; /* Remove sublinhado */
+}
+
+.apresentacao {
+    padding: 5% 15%; /* Espaçamento interno: topo/baixo, laterais */
+    display: flex; /* Usa flexbox */
+    align-items: center; /* Alinha itens verticalmente */
+    justify-content: space-between; /* Espaço entre itens */
+    gap: 82px; /* Espaço entre elementos */
+}
+
+.apresentacao__conteudo {
+    width: 50%; /* Largura do conteúdo */
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Direção em coluna */
+    gap: 40px; /* Espaço entre elementos */
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.25rem; /* Tamanho do título */
+    font-family: var(--fonte-primaria); /* Fonte do título */
+}
+
+.titulo-destaque {
+    color: var(--cor-terciaria); /* Cor de destaque */
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 1.5rem; /* Tamanho do texto */
+    font-family: var(--fonte-secundaria); /* Fonte do texto */
+}
+
+.apresentacao__links {
+    display: flex; /* Usa flexbox */
+    justify-content: space-between; /* Espaço entre links */
+    flex-direction: column; /* Direção em coluna */
+    align-items: center; /* Centraliza itens */
+    gap: 32px; /* Espaço entre links */
+}
+
+.apresentacao__links__subtitulo {
+    font-family: var(--fonte-primaria); /* Fonte do subtítulo */
+    font-weight: 400; /* Peso da fonte */
+    font-size: 1.5rem; /* Tamanho da fonte */
+}
+
+.apresentacao__links__link {
+    /* background-color: rgb(0, 255, 0);*/
+    display: flex; /* Usa flexbox */
+    justify-content: center; /* Centraliza conteúdo */
+    gap: 16px; /* Espaço entre ícones/texto */
+    border: 2px solid var(--cor-terciaria); /* Borda do link */
+    width: 50%; /* Largura do link */
+    text-align: center; /* Centraliza texto */
+    border-radius: 8px; /* Bordas arredondadas */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    padding: 21.5px 0; /* Espaçamento interno */
+    text-decoration: none; /* Remove sublinhado */
+    color: var(--cor-secundaria); /* Cor do texto */
+    font-family: var(--fonte-secundaria); /* Fonte do link */
+}
+
+.apresentacao__links__link:hover {
+    background-color: var(--cor-hover); /* Cor ao passar o mouse */
+}
+
+.apresentacao__imagem {
+    width: 50%; /* Largura da imagem */
+}
+
+.rodape {
+    padding: 24px; /* Espaçamento interno */
+    color: var(--cor-primaria); /* Cor do texto */
+    background-color: var(--cor-terciaria); /* Cor de fundo */
+    text-align: center; /* Centraliza texto */
+    font-family: var(--fonte-secundaria); /* Fonte do rodapé */
+    font-size: 1.5rem; /* Tamanho da fonte */
+    font-weight: 400; /* Peso da fonte */
+}
+
+.apresentacao__texto__link {
+    text-decoration: none; /* Remove sublinhado */
+    color: var(--cor-terciaria); /* Cor do link */
+}
+
+
+/* Responsividade para telas médias (tablets) */
+@media (max-width: 900px) {
+    .cabecalho {
+        padding: 6%; /* Reduz padding */
+    }
+    .apresentacao {
+        padding: 8% 4%; /* Reduz padding lateral */
+        gap: 40px; /* Reduz espaço entre elementos */
+    }
+    .apresentacao__imagem {
+        width: 70%; /* Imagem maior */
+    }
+    .apresentacao__links__link {
+        width: 80%; /* Links mais largos */
+    }
+}
+
+/* Responsividade para telas pequenas (celulares) */
+@media (max-width: 600px) {
+    .cabecalho {
+        padding: 4% 2% 0 2%; /* Padding menor */
+    }
+    .cabecalho__menu {
+        flex-direction: column; /* Menu em coluna */
+        gap: 24px; /* Espaço menor entre itens */
+        align-items: flex-start; /* Alinha à esquerda */
+    }
+    .apresentacao {
+        flex-direction: column-reverse; /* Imagem abaixo do texto */
+        padding: 10% 2%; /* Padding menor */
+        gap: 24px; /* Espaço menor */
+    }
+    .apresentacao__conteudo {
+        width: 100%; /* Ocupa toda largura */
+        gap: 24px; /* Espaço menor */
+    }
+    .apresentacao__conteudo__titulo {
+        font-size: 1.5rem; /* Título menor */
+    }
+    .apresentacao__conteudo__texto {
+        font-size: 1rem; /* Texto menor */
+    }
+    .apresentacao__imagem {
+        width: 100%; /* Imagem ocupa toda largura */
+    }
+    .apresentacao__links__link {
+        width: 100%; /* Links ocupam toda largura */
+        font-size: 1rem; /* Fonte menor */
+        padding: 14px 0; /* Padding menor */
+    }
+    .rodape {
+        font-size: 1rem; /* Rodapé menor */
+        padding: 12px; /* Menos espaço */
+    }
+}
+
+/* Responsividade para telas muito grandes */
+@media (min-width: 1600px) {
+    .apresentacao {
+        padding: 5% 25%; /* Mais espaço lateral */
+    }
+}
